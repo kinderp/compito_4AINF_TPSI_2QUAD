@@ -134,3 +134,38 @@ void accoda(int *a[], int **tail){
          */
 }
 ```
+
+### ES7
+
+Dato il seguente codice `main.c`, scrivere le implementazioni delle funzioni:
+* `void concatena(char *s1, char *s2, char *s3)`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2.
+* `int lunghezza_parola(char *s);` ritorna la lunghezza della stringa s in ingresso (compreso il carattere di fine stringa `\0`)
+
+```c
+#include<stdio.h>
+
+void concatena(char *s1, char *s2, char *s3);
+int lunghezza_parola(char *s);
+
+int main(void){
+        char s1[100];
+        char s2[100];
+
+        printf("Scrivi prima parola: ");
+        scanf("%s", s1);
+
+        printf("Scrivi seconda parola: ");
+        scanf("%s", s2);
+
+        printf("\n");
+
+        int n_s1 = lunghezza_parola(s1);
+        int n_s2 = lunghezza_parola(s2);
+        char s3[n_s1 + n_s2];
+
+        concatena(s1, s2, s3);
+        printf("Terza stringa: %s\n", s3);
+
+        return 0;
+}
+```
