@@ -99,7 +99,7 @@ miao
 miao
 ```
 
-### ES6
+### ES6 (3 pt)
 
 Dato il seguente file `main.c`, completare le parti mancanti (vedi **TODO** nel codice). 
 
@@ -136,7 +136,7 @@ void accoda(int *a[], int **tail){
 }
 ```
 
-### ES7
+### ES7 (2.5 pt)
 
 Dato il seguente codice `main.c`, scrivere le implementazioni delle funzioni:
 * `void concatena(char *s1, char *s2, char *s3);`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2.
