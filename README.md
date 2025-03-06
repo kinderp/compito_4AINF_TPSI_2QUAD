@@ -139,7 +139,7 @@ void accoda(int *a[], int **tail){
 ### ES7
 
 Dato il seguente codice `main.c`, scrivere le implementazioni delle funzioni:
-* `void concatena(char *s1, char *s2, char *s3)`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2.
+* `void concatena(char *s1, char *s2, char *s3);`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2.
 * `int lunghezza_parola(char *s);` ritorna la lunghezza della stringa s in ingresso (compreso il carattere di fine stringa `\0`)
 
 ```c
