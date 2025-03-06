@@ -129,8 +129,9 @@ void accoda(int *a[], int **tail){
         scanf("%d", tmp);
         printf("\n");
 
-        /* TODO: fai un ciclo while (o for) che cicla fino all'ultimo elemento (*tail) di a
-                 ed inserisce in coda tmp. Alla fai puntare tail all'ultimo elemento aggiunto
+        /* TODO: fai un ciclo while (o for) che cicla fino al primo elemento vuoto (*tail) di a
+                 ed inserisce tmp in quel punto (in coda). Infine, ovviamente, fai puntare tail
+                 alla posizione successiva (prima posizione vuota)
          */
 }
 ```
