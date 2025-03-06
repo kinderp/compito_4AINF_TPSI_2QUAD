@@ -113,7 +113,7 @@ void accoda(int **a, int **tail);
 int main(void){
 
         int *a[N] = {NULL};  // vettore di puntatori
-        int *tail = a[0];    // puntaore all'ultimo elemento di a
+        int *tail = a[0];    // puntaore al primo elemento vuoto di a (all'inizio sono tutti vuoti e tail punto al primo elemento di a)
         /* TODO: fai un ciclo for che richiama quattro volte la funzione accoda()
                  passando in ingresso il vettore a e l'indirizzo di memoria di tail
          */
