@@ -140,7 +140,7 @@ void accoda(int **a, int **tail);
 int main(void){
 
         int *a[N] = {NULL};  // vettore di puntatori
-        int *tail = a[0];    // puntaore al primo elemento vuoto di a (all'inizio sono tutti vuoti e tail punto al primo elemento di a)
+        int *tail = a[0];    // puntatore al primo elemento vuoto di a (all'inizio sono tutti vuoti e tail punto al primo elemento di a)
         /* TODO: fai un ciclo for che richiama quattro volte la funzione accoda()
                  passando in ingresso il vettore a e l'indirizzo di memoria di tail
          */
@@ -166,7 +166,7 @@ void accoda(int *a[], int **tail){
 ### ES7 (2.5 pt)
 
 Dato il seguente codice `main.c`, scrivere le implementazioni delle funzioni:
-* `void concatena(char *s1, char *s2, char *s3);`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2.
+* `void concatena(char *s1, char *s2, char *s3);`: copia in s3 le due stringhe s1 e s2 (non copiare gli `\0` di s1 ed s2)
 * `int lunghezza_parola(char *s);` ritorna la lunghezza della stringa s in ingresso (compreso il carattere di fine stringa `\0`)
 
 ```c
