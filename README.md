@@ -1,19 +1,28 @@
 ### ES1 (2 pt)
 
-Scrivere file c: `es1.c` che stampi con quattro chiamate alla funzione `printf()` il valore esadecimale (`%#x`) e il corrispondente indirizzo di memoria (`%p`) di ciascuno dei quattro byte del valore intero senza segno `12756`. Infine, incollare l'output del programma nel file `es1.txt` e dire se la propria macchina è di tipo BIG o LITTLE endian, argomentando brevemente i motivi della risposta.
+Scrivere file c: `es1.c` che stampi con un ciclo for e con la funzione `printf()` il valore esadecimale (`%#x`) e il corrispondente indirizzo di memoria (`%p`) di ciascuno dei quattro byte del valore intero senza segno `18437`. Infine, incollare l'output del programma nel file `es1.txt` e dire se la propria macchina è di tipo BIG o LITTLE endian, argomentando brevemente i motivi della risposta.
 
 ### ES2 (2.5 pt)
 
-Scrivere un file c: `es2.c` che implementi la funzione `inverti_stringa(char *stringa, int dim)` richiamata nel main di sotto.  
+Scrivere un file c: `es2.c` che implementi la funzione `void inverti_capitalizza_stringa(char *, int);` richiamata nel main di sotto.  
+La funzione deve invertire e trasformare in maiuscolo i caratteri del vettore `stringa[10]`
 
 ```c
 int main(void){
         char stringa[10] =  "aeiou";
         printf("%s\n", stringa);
-        inverti_stringa(stringa, 6);
+        inverti_capitalizza_stringa(stringa, 6);
         printf("%s\n", stringa);
         return 0;
 }
+```
+
+Questo è l'output del programma corretto:
+
+```
+vagrant@ubuntu2204:/lab/prova_scritta_puntatori_4$ ./es2
+aeiou
+UOIEA
 ```
 
 ### ES3 (0.5 pt)
@@ -61,16 +70,18 @@ Copiare tutto il codice di sotto nel file `es5.c`. Compilando il codice otterrai
 ```c
 #include<stdio.h>
 
+void swap(int *a, int *b);
+
 int main(void){
 
         int a = 5;
         a++;
         int *pa;
         printf("a vale %d, a e' all'indirizzo di memoria %p\n", *pa, pa);
-
-
+        
         // iterare il vettore con un puntatore
         int b[5] = {1,2,3,4,5};
+        int *pb = &b;
         while(b<&b[5]){
                 printf("%d\t", *b);
                 b++;
@@ -87,16 +98,32 @@ int main(void){
         d[0] = 'm';
         printf("%s\n", d);
 
+        // invertire il contenuto delle variaibili aa e bb
+        int aa = 3;
+        int bb = 4;
+        int *pa, *pb;
+        printf("Priva di swap: aa=%d bb=%d\n", *pa, *pb);
+        swap(pa, pb);
+        printf("Dopo swap: aa=%d bb=%d\n", *pa, *pb);
+
+}
+
+void swap(int *a, int *b){
+        int tmp = a;
+        a = b;
+        b = tmp
 }
 ```
 
 l'output corretto del programma funzionante è il seguente (ovviamente il valore dell'indirizzo di memoria di a sarà diverso)
 
 ```
-a vale 6, a e' all'indirizzo di memoria 0x7ffe2ff8bc24
+a vale 5, a e' all'indirizzo di memoria 0x7ffc6fe2cb1c
 1       2       3       4       5
 miao
 miao
+Priva di swap: aa=3 bb=4
+Dopo swap: aa=4 bb=3
 ```
 
 ### ES6 (3 pt)
